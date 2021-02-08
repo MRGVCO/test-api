@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.json({message: 'alive'});
 });
 
+const userRoutes = require('./user');
+
+router.use('/users', userRoutes);
+
+
 module.exports = router;
